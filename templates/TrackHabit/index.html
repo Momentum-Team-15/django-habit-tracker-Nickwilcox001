@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <div class="login_cred">
+        <a href="{% url 'login' %}">login</a>
+        <a href="{% url 'auth_logout' %}">logout</a>
+    </div>
+
+
+    <div class="habits_container">
+            <h3>Habits</h3>
+            <a href="{% url 'create_habit%' %}">Add habit</a>
+            <br>
+            <br>
+            {% for habit in habits %}
+            <div class="habits">
+                <h3>{{ habit.name }}</h3>
+                
+            </div>
+    </div>
+</body>
