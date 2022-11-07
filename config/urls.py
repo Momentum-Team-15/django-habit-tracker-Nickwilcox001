@@ -19,9 +19,13 @@ from TrackHabbit import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include("django.contrib.auth.urls")),
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name = 'home'),
     path('habits/new', views.create_habit, name='create_habit'),
     path('habits/edit<habit_id>', views.edit_habit, name='edit_habit'),
     path('habits/delete<habit_id>', views.delete_habit, name='delete_habit'),
+    path('habits/view<habit_id>', views.view_habit, name='view_habit'),
+    path('habits/create_record<habit_id>', views.create_record, name='create_record')
+
 ]

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<h1>Welcome to TrackHabit</h1>
 <body>
     <div class="login_cred">
         <a href="{% url 'login' %}">login</a>
@@ -9,14 +10,18 @@
 
 
     <div class="habits_container">
-            <h3>Habits</h3>
-            <a href="{% url 'create_habit%' %}">Add habit</a>
+            <h2>Habits</h2>
+            <a href="{% url 'create_habit' %}">Add habit</a>
             <br>
             <br>
             {% for habit in habits %}
             <div class="habits">
-                <h3>{{ habit.name }}</h3>
-                
+                <a href="{% url 'view_habit' habit.id %}" class="Habit_name">{{ habit.name }}</a>
+                <p>{{ habit.description }}</p>
+                <br>
+                <br>
             </div>
+            {% endfor %}
     </div>
 </body>
+{% endblock %}

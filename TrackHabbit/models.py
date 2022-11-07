@@ -21,7 +21,7 @@ class Habit(models.Model):
 
 class DailyRecord(models.Model):
     habit_key=models.ForeignKey(Habit, on_delete=models.CASCADE, related_name='records')
-    date=models.DateField(auto_now_add=True)
+    date = models.DateField()
     complete = models.BooleanField(default=False)
 
     def __str__(self):

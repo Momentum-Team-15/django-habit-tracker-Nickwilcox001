@@ -1,0 +1,20 @@
+body{
+   
+}
+.records{
+    border : 3px solid black;
+    width: 30px;
+    height: 30px;
+    white-space: 8px;
+    text-align: center;
+    vertical-align: 50px;
+    line-height: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+.record_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
