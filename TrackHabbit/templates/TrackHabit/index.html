@@ -4,14 +4,18 @@
 <h1>Welcome to TrackHabit</h1>
 <body>
     <div class="login_cred">
-        <a href="{% url 'login' %}">login</a>
-        <a href="{% url 'auth_logout' %}">logout</a>
+        <a href="{% url 'login' %}"class='log'>login</a>
+        <a href="{% url 'auth_logout' %}"class='log'>logout</a>
+    </div>
+    <div class = title>
+        <a href="{% url 'create_habit' %}"class='add_button'>Add habit</a>
+        <h2>Habits</h2>
+        
     </div>
 
 
     <div class="habits_container">
-            <h2>Habits</h2>
-            <a href="{% url 'create_habit' %}">Add habit</a>
+            
             <br>
             <br>
             {% for habit in habits %}
