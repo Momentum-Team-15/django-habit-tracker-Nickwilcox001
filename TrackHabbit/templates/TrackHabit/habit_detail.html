@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<a href="{%url 'home' %}">home</a>
+<h1>{{ habit.name }}</h1>
+<a href="{% url 'delete_habit' habit.id %}">Delete</a>
+<a href="{% url 'edit_habit' habit.id %}">Edit</a>
+<br>
+<br>
+<a href="{% url 'create_record' habit.id %}">Create Record</a>
+<div class = 'record_container'>
+    {% for record in records %}
+    <div class="records">
+            <p class="check">✔️</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
